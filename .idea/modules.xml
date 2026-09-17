@@ -8,7 +8,10 @@
       <module fileurl="file://$PROJECT_DIR$/CLASE-4-HERENCIA/CLASE-4-HERENCIA.iml" filepath="$PROJECT_DIR$/CLASE-4-HERENCIA/CLASE-4-HERENCIA.iml" />
       <module fileurl="file://$PROJECT_DIR$/CLASE-5/CLASE-5.iml" filepath="$PROJECT_DIR$/CLASE-5/CLASE-5.iml" />
       <module fileurl="file://$PROJECT_DIR$/CLASE-5-B/CLASE-5-B.iml" filepath="$PROJECT_DIR$/CLASE-5-B/CLASE-5-B.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CLASE-6/CLASE-6.iml" filepath="$PROJECT_DIR$/CLASE-6/CLASE-6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CLASE-6/ClasesAbstractas/ClasesAbstractas.iml" filepath="$PROJECT_DIR$/CLASE-6/ClasesAbstractas/ClasesAbstractas.iml" />
       <module fileurl="file://$PROJECT_DIR$/ICARO-0426-CLASES.iml" filepath="$PROJECT_DIR$/ICARO-0426-CLASES.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CLASE-6/Interfaces/Interfaces.iml" filepath="$PROJECT_DIR$/CLASE-6/Interfaces/Interfaces.iml" />
     </modules>
   </component>
 </project>
