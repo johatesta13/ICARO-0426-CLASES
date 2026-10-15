@@ -40,7 +40,7 @@ public class SeleniumElementsTest {
 
         driver.manage().window().maximize();
 
-        wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 
 
     }
@@ -70,22 +70,20 @@ public class SeleniumElementsTest {
     *
     *
     * */
-
-        @Test(priority = 2, description = "Seleccionando y manejando elementos dropdown con la clase select")
-        public void DropDownText(){
+        @Test(priority = 2, description = "Test que sirve para trabajar con lista de desplegables o dropdowns")
+        void listaDesplegable(){
 
             driver.get(BASE_URL + "/dropdown");
 
-            WebElement dropdown = driver.findElement(By.id("dropdown"));
+            WebElement dropdownElement = driver.findElement(By.id("dropdown"));
 
-            Select seleccion = new Select(dropdown);
+            Select select = new Select(dropdownElement);
 
-            seleccion.selectByVisibleText("Option 1");
+            select.selectByVisibleText("Option 2");
 
-            String opcionSeleccionada = seleccion.getFirstSelectedOption().getText();
+            String selectedOpcion = select.getFirstSelectedOption().getText();
 
-            Assert.assertEquals(opcionSeleccionada, "Option 1", "La opcion esperada no coincide con la seleccionada");
-
+            Assert.assertEquals(selectedOpcion, "Option 2", "Se esperaba que seleccione la opcion 2");
 
         }
 
@@ -95,24 +93,26 @@ public class SeleniumElementsTest {
          *
          * */
 
-        @Test(priority = 3,description = "Trabajando con seleccion en checkboxes")
-        public void checkboxTest(){
-
-
-            driver.get(BASE_URL + "/checkboxes");
-
-            WebElement checkBox1 = driver.findElement(By.xpath("//form[@id='checkboxes']/input[1]"));
-
-            if(!checkBox1.isSelected()){
-
-                checkBox1.click();
-            }
-
-            Assert.assertTrue(checkBox1.isSelected(),"El elemento no pudo ser seleccionado");
 
 
 
-        }
+       @Test(priority = 3, description = "Seleccion de checkboxes")
+       void seleccionarCheckBoxes(){
+
+           driver.get(BASE_URL + "/checkboxes");
+
+           WebElement checkbox = driver.findElement(By.xpath("//input[1]"));
+
+           if(!checkbox.isSelected()){
+               checkbox.click();
+           }
+
+           Assert.assertTrue(checkbox.isSelected(),"No selecciono la opcion buscada");
+
+
+
+       }
+
 
 
         /*
