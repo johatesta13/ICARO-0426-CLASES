@@ -16,7 +16,7 @@ public class CartPage extends BasePage{
 
     //Remove btn, hacemos por css selector para borrar cualquier elemento
     //no uno en particular
-    private By removeBtn = By.cssSelector("#remove-sauce-labs-backpack");
+    private By removeBtn = By.cssSelector("button[id^='remove']");
 
     private By itemName = By.className("inventory_item_name");
 
@@ -59,6 +59,27 @@ public class CartPage extends BasePage{
     public CheckoutPage checkoutBtn(){
         click(checkoutBtn);
         return new CheckoutPage(driver);
+    }
+
+
+
+    //METODOS PARA MANEJAR ITEMS
+    public CartPage removeFirstItem(){
+
+        List<WebElement> buttons = driver.findElements(removeBtn);
+
+        if(!buttons.isEmpty()){
+            buttons.get(0).click();
+        }
+        return this;
+    }
+
+    public CartPage removeAllItems(){
+        List<WebElement> buttons = driver.findElements(removeBtn);
+        for(WebElement button : buttons ){
+            button.click();
+        }
+        return this;
     }
 
 
